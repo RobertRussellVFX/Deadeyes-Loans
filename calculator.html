@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stephen's Shop for the Big Adventurer</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="index.html">Stephens Shop</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav" >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="loans.html">LOANS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="store.html">Store</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h1>Loan Calculator</h1>
+              <p>Free money</p>
+            </div>
+          </div>
+      <div class="row">
+  <div class="col-md-4">
+    <form>
+      <div class="form-group">
+        <label for="loanAmount">Loan Amount:</label>
+        <input type="number" class="form-control" id="loanAmount">
+      </div>
+      <div class="form-group">
+        <label for="interestRate">Interest Rate:</label>
+        <input type="number" class="form-control" id="interestRate" value="0.05">
+      </div>
+      <div class="form-group">
+        <label for="repaymentPeriod">Repayment Period (months):</label>
+        <input type="number" class="form-control" id="repaymentPeriod">
+      </div>
+      <button type="button" class="btn btn-danger btn-buy" id="calculateLoan">Calculate</button>
+    </form>
+  </div>
+  <div class="col-md-8 d-flex align-items-center justify-content-center">
+    <table class="table table-bordered">
+      <tbody>
+        <tr>
+          <td>Monthly Repayment:</td>
+          <td id="monthlyRepayment">$0</td>
+        </tr>
+        <tr>
+          <td>Total Repayment:</td>
+          <td id="totalRepayment">$0</td>
+        </tr>
+        <tr>
+          <td>Total Interest:</td>
+          <td id="totalInterest">$0</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+        <script>
+          $("#calculateLoan").click(function() {
+            var loanAmount = $("#loanAmount").val();
+            var interestRate = $("#interestRate").val();
+            var repaymentPeriod = $("#repaymentPeriod").val();
+            var monthlyRepayment = (loanAmount * interestRate / 12) / (1 - (Math.pow(1 / (1 + interestRate / 12), repaymentPeriod)));
+            $("#monthlyRepayment").text("$" + monthlyRepayment.toFixed(2));
+            $("#totalRepayment").text("$" + (monthlyRepayment * repaymentPeriod).toFixed(2));
+            $("#totalInterest").text("$" + ((monthlyRepayment * repaymentPeriod) - loanAmount).toFixed(2));
+          });
+        </script>
+      </main>
+              <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+              <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+              <script>
+     
+              </script>
+              </body>
+              </html>
+              
+              

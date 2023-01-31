@@ -1,0 +1,123 @@
+
+
+@font-face {
+    font-family: 'requiemregular';
+    src: url('requiem1-webfont.woff2') format('woff2'),
+         url('requiem1-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+  font-family: 'requiemregular';
+  background-color: #313638;
+  color: #EAF2EF;
+  background-image: url('https://www.myfreetextures.com/wp-content/uploads/2013/07/old-brown-vintage-parchment-paper-texture.jpg');
+  background-size: 80%;
+  background-position: center;
+  background-blend-mode:exclusion;
+  
+
+
+
+  
+}
+
+
+
+
+header .navbar {
+
+  background-color: #26282a;
+  outline: 1px solid #e40712;
+}
+
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    text-align: center;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: black;
+    margin-bottom: 20px;
+  }
+
+label,table {
+    color: black;
+    margin-bottom: 20px;
+  }
+
+
+p 
+{
+color: black;
+font-size: 15px;
+padding: 2%;
+
+}
+
+  img {
+
+    width: 100px;
+    height: 100px;
+  }
+  
+  .jumbotron {
+    background-color: #000000;
+    padding: 30px;
+    border-radius: 10px;
+  }
+  
+  .store-item {
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .btn-buy {
+    background-color: #D62828;
+    color: #EAF2EF;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .btn-buy:hover {
+    background-color: #EAF2EF;
+    color: #D62828;
+  }
+  
+  #checkoutModal .modal-content {
+    background-color: #EAF2EF;
+    color: #313638;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  #checkoutModal .modal-header,
+  #checkoutModal .modal-footer {
+    background-color: #D62828;
+    color: #EAF2EF;
+    border-radius: 10px;
+  }
+  
+  #checkoutModal .btn {
+    background-color: #D62828;
+    color: #EAF2EF;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  #checkoutModal .btn:hover {
+    background-color: #EAF2EF;
+    color: #D62828;
+  }
+  
