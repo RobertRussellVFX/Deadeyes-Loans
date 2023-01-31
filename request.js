@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const token = "ODk5NzI5ODE2ODU5ODYxMDIy.Gb-515.6NhH-md1dpX5x-YUW1XNjGESv6fnL_vP-HYhIU";
+const token = "./config.json";
 
 client.on("ready", () => {
   console.log(`Bot is ready, logged in as ${client.user.tag}!`);
